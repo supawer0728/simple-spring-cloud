@@ -1,0 +1,12 @@
+spring:
+  data:
+    rest:
+      base-path: /api
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - info
+          - health
+          - metrics
