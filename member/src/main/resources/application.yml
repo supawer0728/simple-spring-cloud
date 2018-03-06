@@ -1,7 +1,6 @@
 spring:
-  data:
-    rest:
-      base-path: /api
+  application.name: member-api
+  data.rest.base-path: /api
 management:
   endpoints:
     web:
@@ -10,3 +9,4 @@ management:
           - info
           - health
           - metrics
+eureka.client.service-url.defaultZone: http://localhost:8761/eureka

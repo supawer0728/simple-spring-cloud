@@ -1,7 +1,9 @@
-spring:
-  application:
-    name: api-gateway
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+spring.application.name: api-gateway
+eureka.client.service-url.defaultZone: http://localhost:8761/eureka
+zuul:
+  ignored-services: '*'
+  routes:
+    member-api:
+      path: /api/members/**
+      stripPrefix: false
+management.security.enabled: false
